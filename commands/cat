@@ -1,0 +1,4 @@
+import sys,terminal
+sys.path.append("/")
+with open(terminal.args[0], 'r') as fin:
+    print(fin.read())

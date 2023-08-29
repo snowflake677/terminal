@@ -1,0 +1,4 @@
+import sys,terminal,requests
+sys.path.append("/")
+r = requests.get(terminal.args[0], allow_redirects=True)
+open(terminal.dir+"\\"+terminal.args[1], 'wb').write(r.content)

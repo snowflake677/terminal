@@ -1,0 +1,4 @@
+import datetime
+time=datetime.datetime.now()
+time=time.strftime("%H:%M:%S")
+print(time)

@@ -1,0 +1,10 @@
+import sys,os,terminal
+sys.path.append("/")
+try:
+    if terminal.args[0] != "..":
+        path=terminal.dir+terminal.args[0]
+    else:
+        path=terminal.dir
+except:
+    path=terminal.dir
+print(os.listdir(path))

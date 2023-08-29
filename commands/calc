@@ -1,0 +1,8 @@
+import sys,terminal
+sys.path.append("/")
+
+try:
+    result = eval(terminal.args[0])
+    print("Result:", result)
+except:
+    print("Error: Invalid expression")
