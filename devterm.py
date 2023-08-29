@@ -8,7 +8,7 @@ os.system(":terminal")
 on=True
 while on:
     command = input(dir+perms)
-    
+    args=[""]
     if command.startswith("exit"):
         if args[0] =="-h":
             print("quits the terminal\nexit")

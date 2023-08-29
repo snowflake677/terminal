@@ -28,6 +28,7 @@ else:
     get("time")
     get("toutch")
     get("update")
+    get("tap")
     get("wget")
     getc("-h")
     getc("calc")
