@@ -1,3 +1,6 @@
 import sys,terminal,shutil
 sys.path.append("/")
-shutil.copy2(terminal.args[0],terminal.args[1])
+if terminal.args[0] == "-h":
+    print("copys a file\ncopy [source] [target]")
+else:
+    shutil.copy2(terminal.args[0],terminal.args[1])

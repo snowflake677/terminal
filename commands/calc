@@ -1,8 +1,10 @@
 import sys,terminal
 sys.path.append("/")
-
-try:
-    result = eval(terminal.args[0])
-    print("Result:", result)
-except:
-    print("Error: Invalid expression")
+if terminal.args[0] == "-h":
+    print("calculates an expression\ncalc [expression]")
+else:
+    try:
+        result = eval(terminal.args[0])
+        print("Result:", result)
+    except:
+        print("Error: Invalid expression")

@@ -9,7 +9,10 @@ while on:
     command = input(dir+perms)
     
     if command.startswith("exit"):
-        on=False
+        if args[0] =="-h":
+            print("quits the terminal\nexit")
+        else:
+            on=False
     
     elif command.startswith("cd"):
         parts = command.split()
@@ -17,6 +20,8 @@ while on:
         args = parts[1:]
         if args[0] =="..":
             dir=os.path.split(dir)[0]
+        elif args[0] =="-h":
+            print("changes the curent directory\ncd [path]")
         else:
             dir=dir+"\\"+args[0]
     else:
