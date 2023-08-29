@@ -3,6 +3,7 @@ os.system('title terminal')
 os.system('@mode con cols=150 lines=60')
 dir=sys.path[0]
 perms="#"
+args=[""]
 os.system(":terminal")
 on=True
 while on:
