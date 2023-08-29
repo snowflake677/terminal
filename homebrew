@@ -1,0 +1,10 @@
+import sys,requests,terminal
+sys.path.append("/")
+def get(source,file):
+    r = requests.get(source+file, allow_redirects=True)
+    open(sys.path[0]+"\\commands\\"+file, 'wb').write(r.content)
+  
+if terminal.args[0] == "-h":
+    print("homebrew\nhomebrew [source] [package name]")
+else:
+    get(terminal.args[0],terminal.args[1])
