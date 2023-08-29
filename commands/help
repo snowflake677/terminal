@@ -1,7 +1,0 @@
-import os
- 
-files = os.listdir("commands")
-files = [f for f in files if os.path.isfile("commands"+'/'+f)]
-for x in files:
-    if not x.endswith(".py"):
-        print(x)

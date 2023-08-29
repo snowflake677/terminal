@@ -1,6 +1,0 @@
-import sys,terminal,os
-sys.path.append("/")
-if terminal.args[0] == "-h":
-    print("renames a file\nrename [target] [new name]")
-else:
-    os.rename(terminal.args[0],terminal.args[1])
