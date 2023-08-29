@@ -1,51 +1,53 @@
 import sys,terminal
-if terminal.args[0] == "-h":
-    print("help msg")
-else:
-    def save_file(filename, content):
-        with open(filename, "w") as file:
-            file.write("\n".join(content))
-    
-    def main():
-        print("Simple Text Editor\n")
-        
-        filename = input("Enter the filename: ")
-        
-        try:
-            with open(filename, "r") as file:
-                content = file.read().splitlines()
-        except FileNotFoundError:
-            print(f"File '{filename}' not found. Creating a new file.")
-            content = []
-        
-        while True:
-            print("\n".join(content))
-            print("\nCommands: ")
-            print("1 - Add/Edit Line")
-            print("2 - Delete Line")
-            print("3 - Save and Exit")
-            
-            choice = input("Enter your choice: ")
-            
-            if choice == "1":
-                line_number = int(input("Enter line number (0-indexed): "))
-                if line_number < len(content):
-                    content[line_number] = input(f"Enter new text for line {line_number}: ")
+sys.path.append("/")
+def edit(arg):
+    if arg == "-h":
+        print("help msg")
+    else:
+        def save_file(filename, content):
+            with open(filename, "w") as file:
+                file.write("\n".join(content))
+
+        def main():
+            print("Simple Text Editor\n")
+
+            filename = input("Enter the filename: ")
+
+            try:
+                with open(filename, "r") as file:
+                    content = file.read().splitlines()
+            except FileNotFoundError:
+                print(f"File '{filename}' not found. Creating a new file.")
+                content = []
+
+            while True:
+                print("\n".join(content))
+                print("\nCommands: ")
+                print("1 - Add/Edit Line")
+                print("2 - Delete Line")
+                print("3 - Save and Exit")
+
+                choice = input("Enter your choice: ")
+
+                if choice == "1":
+                    line_number = int(input("Enter line number (0-indexed): "))
+                    if line_number < len(content):
+                        content[line_number] = input(f"Enter new text for line {line_number}: ")
+                    else:
+                        content.append(input(f"Enter text for new line {line_number}: "))
+                elif choice == "2":
+                    line_number = int(input("Enter line number to delete: "))
+                    if 0 <= line_number < len(content):
+                        del content[line_number]
+                    else:
+                        print("Invalid line number.")
+                elif choice == "3":
+                    save_file(filename, content)
+                    print(f"File '{filename}' saved. Exiting.")
+                    break
                 else:
-                    content.append(input(f"Enter text for new line {line_number}: "))
-            elif choice == "2":
-                line_number = int(input("Enter line number to delete: "))
-                if 0 <= line_number < len(content):
-                    del content[line_number]
-                else:
-                    print("Invalid line number.")
-            elif choice == "3":
-                save_file(filename, content)
-                print(f"File '{filename}' saved. Exiting.")
-                break
-            else:
-                print("Invalid choice. Please choose again.")
-    
-    if __name__ == "__main__":
+                    print("Invalid choice. Please choose again.")
+
+        
         main()
-    
+edit(terminal.args[0])

@@ -1,7 +1,9 @@
 import sys,terminal,requests
 sys.path.append("/")
-if terminal.args[0] == "-h":
-    print("copys the source of a url to a file\nwget [url] [file]")
-else:
-    r = requests.get(terminal.args[0], allow_redirects=True)
-    open(terminal.dir+"\\"+terminal.args[1], 'wb').write(r.content)
+def wget(arg1,arg2):
+    if arg1 == "-h":
+        print("copys the source of a url to a file\nwget [url] [file]")
+    else:
+        r = requests.get(arg1, allow_redirects=True)
+        open(terminal.dir+"\\"+arg2, 'wb').write(r.content)
+wget(terminal.args[0],terminal.args[1])

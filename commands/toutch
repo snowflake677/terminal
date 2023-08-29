@@ -1,6 +1,8 @@
 import sys,terminal
 sys.path.append("/")
-if terminal.args[0] == "-h":
-    print("creats a file\ntoutch [file name]")
-else:
-    open(terminal.args[0]).close
+def toutch(arg):
+    if arg == "-h":
+        print("creats a file\ntoutch [file name]")
+    else:
+        open(terminal.dir+"\\"+arg,"w+").close
+toutch(terminal.args[0])

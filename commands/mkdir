@@ -1,6 +1,8 @@
 import sys,terminal,os
 sys.path.append("/")
-if terminal.args[0] == "-h":
-    print("creats a directory\nmkdir [folder name]")
-else:
-    os.mkdir(terminal.args[0])
+def mkdir(arg):
+    if arg == "-h":
+        print("creats a directory\nmkdir [folder name]")
+    else:
+        os.mkdir(arg)
+mkdir(terminal.args[0])

@@ -1,6 +1,8 @@
 import sys,terminal,os
 sys.path.append("/")
-if terminal.args[0] == "-h":
-    print("clears the terminal\nclear")
-else:
-    os.system("cls")
+def clear(arg):
+    if arg == "-h":
+        print("clears the terminal\nclear")
+    else:
+        os.system("cls")
+clear(terminal.args[0])

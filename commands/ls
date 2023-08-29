@@ -1,13 +1,15 @@
 import sys,os,terminal
 sys.path.append("/")
-if terminal.args[0] == "-h":
-    print("lists the contains of a folder\nls <path>")
-else:
-    try:
-        if terminal.args[0] != "..":
-            path=terminal.dir+terminal.args[0]
-        else:
+def ls(arg=""):
+    if arg == "-h":
+        print("lists the contains of a folder\nls <path>")
+    else:
+        try:
+            if arg != "..":
+                path=terminal.dir+"\\"+arg
+            else:
+                path=terminal.dir
+        except:
             path=terminal.dir
-    except:
-        path=terminal.dir
-    print(os.listdir(path))
+        print(os.listdir(path))
+ls(terminal.args[0])

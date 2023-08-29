@@ -1,6 +1,8 @@
 import sys,terminal,runpy
 sys.path.append("/")
-if terminal.args[0] == "-h":
-    print("executes a file\nexec [file]")
-else:
-    runpy.run_path(terminal.args[0])
+def exec(arg):
+    if arg == "-h":
+        print("executes a file\nexec [file]")
+    else:
+        runpy.run_path(arg)
+exec(terminal.args[0])

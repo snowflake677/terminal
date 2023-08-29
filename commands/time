@@ -1,8 +1,10 @@
 import datetime,sys,terminal
 sys.path.append("/")
-if terminal.args[0] == "-h":
-    print("displays the curent time\ntime")
-else:
-    time=datetime.datetime.now()
-    time=time.strftime("%H:%M:%S")
-    print(time)
+def time(arg):
+    if arg == "-h":
+        print("displays the curent time\ntime")
+    else:
+        time=datetime.datetime.now()
+        time=time.strftime("%H:%M:%S")
+        print(time)
+time(terminal.args[0])

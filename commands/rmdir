@@ -1,6 +1,8 @@
 import sys,terminal,os
 sys.path.append("/")
-if terminal.args[0] == "-h":
-    print("removes a directory\nrmdir [target]")
-else:
-    os.rmdir(terminal.args[0])
+def rmdir(arg):
+    if arg == "-h":
+        print("removes a directory\nrmdir [target]")
+    else:
+        os.rmdir(arg)
+rmdir(terminal.args[0])

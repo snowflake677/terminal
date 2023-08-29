@@ -1,6 +1,8 @@
 import sys,terminal,os
 sys.path.append("/")
-if terminal.args[0] == "-h":
-    print("help msg")
-else:
-    os.remove(terminal.args[0])
+def remove(arg):
+    if arg == "-h":
+        print("help msg")
+    else:
+        os.remove(arg)
+remove(terminal.args[0])
