@@ -1,7 +1,7 @@
 import sys,requests
 sys.path.append("/")
 def get(file):
-    r = requests.get("https://raw.githubusercontent.com/snowflake677/terminal/main/"+url, allow_redirects=True)
+    r = requests.get("https://raw.githubusercontent.com/snowflake677/terminal/main/"+file, allow_redirects=True)
     open(sys.path[0]+"\\"+file, 'wb').write(r.content)
 get("terminal.py")
 get("commands\\-h")
