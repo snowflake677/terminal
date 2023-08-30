@@ -1,4 +1,4 @@
-import os,runpy,sys
+import os,runpy,sys,cmds.text
 os.system('title terminal')
 os.system('@mode con cols=150 lines=60')
 dir=sys.path[0]
@@ -6,6 +6,16 @@ perms="#"
 args=[""]
 os.system(":terminal")
 on=True
+bootimg="""
+  ________________  __  ________   _____    __ 
+ /_  __/ ____/ __ \/  |/  /  _/ | / /   |  / / 
+  / / / __/ / /_/ / /|_/ // //  |/ / /| | / /  
+ / / / /___/ _, _/ /  / // // /|  / ___ |/ /___
+/_/ /_____/_/ |_/_/  /_/___/_/ |_/_/  |_/_____/
+                                               
+
+"""
+cmds.text.print_with_color(bootimg,cmds.text.Back.BLUE+cmds.text.Fore.GREEN)
 while on:
     command = input(dir+perms)
     args=[""]
