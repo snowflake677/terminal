@@ -1,0 +1,3 @@
+import opt.homebrew.homebrew as hb,sys,terminal
+sys.path.append("/")
+hb.get(terminal.args[0])
