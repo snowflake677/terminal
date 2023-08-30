@@ -8,5 +8,5 @@ def hb(arg):
     if arg == "-h":
         print("homebrew\nhomebrew [package name]")
     else:
-	t.print_with_color(conf.logo, color=Back.CYAN)
-	get(arg)
+        t.print_with_color(conf.logo, color=t.Back.CYAN)
+        get(arg)
