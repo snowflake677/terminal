@@ -9,3 +9,4 @@ def hb(arg):
         print("homebrew\nhomebrew [package name]")
     else:
 	t.print_with_color(conf.logo, color=Back.CYAN)
+	get(arg)
