@@ -1,4 +1,4 @@
-import sys,requests,cmds.homebrewconfig as conf,cmds.text as t
+import sys,requests,cmds.homebrew.config as conf,cmds.text as t
 sys.path.append("/")
 
 def get(file):
