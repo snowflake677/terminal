@@ -1,1 +1,6 @@
-this is a terminal made in python
+todo
+install art
+logging
+return
+better dev terminal
+bug fixes
