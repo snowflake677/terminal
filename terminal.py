@@ -6,16 +6,7 @@ perms="#"
 args=[""]
 os.system(":terminal")
 on=True
-bootimg="""
-  ________________  __  ________   _____    __ 
- /_  __/ ____/ __ \/  |/  /  _/ | / /   |  / / 
-  / / / __/ / /_/ / /|_/ // //  |/ / /| | / /  
- / / / /___/ _, _/ /  / // // /|  / ___ |/ /___
-/_/ /_____/_/ |_/_/  /_/___/_/ |_/_/  |_/_____/
-                                               
-
-"""
-cmds.text.print_with_color(bootimg,cmds.text.Back.BLUE+cmds.text.Fore.GREEN)
+cmds.text.print_with_color(cmds.text.bootimg,cmds.text.Back.BLUE+cmds.text.Fore.GREEN)
 while on:
     command = input(dir+perms)
     args=[""]
@@ -44,4 +35,5 @@ while on:
                     args = parts[1:]
                 runpy.run_path("commands\\"+command)
             except:
+
                 print("no command found try help")
