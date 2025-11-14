@@ -1,8 +1,8 @@
 import sys,terminal
 sys.path.append("/")
-def toutch(arg):
+def touch(arg):
     if arg == "-h":
-        print("creats a file\ntoutch [file name]")
+        print("creats a file\ntouch [file name]")
     else:
         open(terminal.dir+"\\"+arg,"w+").close
-toutch(terminal.args[0])
+touch(terminal.args[0])
